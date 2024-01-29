@@ -1,11 +1,14 @@
-<script lang="ts" setup></script>
+<script setup>
+import Header from "@/components/Utils/Header.vue";
+import Footer from "@/components/Utils/Footer.vue";
+</script>
 
 <template>
   <div>
-    <UtilsHeader />
+    <Header />
     <!-- slot 可以想像成 router-view 的功能，才能顯示頁面畫面 -->
     <slot />
-    <UtilsFooter />
+    <Footer />
   </div>
 </template>
 

@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import Btn from "@/components/Box/Btn.vue";
+import Btn from "@/components/global/Box/Btn.vue";
 
 </script>
 
