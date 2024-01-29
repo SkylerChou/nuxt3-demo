@@ -1,7 +1,5 @@
 <template>
-  <h1>首頁</h1>
-  <!-- Nuxt 自動 import -->
-  <Home />
+  <header>Footer</header>
 </template>
 
 <script>

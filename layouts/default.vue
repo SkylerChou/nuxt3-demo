@@ -2,10 +2,10 @@
 
 <template>
   <div>
-    <header>123</header>
+    <UtilsHeader />
     <!-- slot 可以想像成 router-view 的功能，才能顯示頁面畫面 -->
     <slot />
-    <footer>456</footer>
+    <UtilsFooter />
   </div>
 </template>
 
