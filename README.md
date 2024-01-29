@@ -73,3 +73,26 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## 設定專案結構指令
+
+```bash
+# 新增 page 檔案
+npx nuxi add page <檔案名稱>
+
+# 新增 layout 檔案
+npx nuxi add layout <檔案名稱>
+
+# 新增 component 檔案
+npx nuxi add component <檔案名稱>
+
+# 新增 composable 檔案
+npx nuxi add composable <檔案名稱>
+
+# 新增 plugin 檔案
+npx nuxi add plugin <檔案名稱>
+
+# 新增 store 檔案
+npm install pinia @pinia/nuxt
+
+```
