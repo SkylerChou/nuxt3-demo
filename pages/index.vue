@@ -1,6 +1,7 @@
 <template>
   <h1>首頁 : {{ store.count }}</h1>
   <h2>{{$hello("Skyler")}}</h2>
+  <h2 v-timeformat="1680574081915"></h2>
   <button @click="store.addCount">Add</button>
 
   <!-- Nuxt 自動 import -->
@@ -14,7 +15,7 @@
 // 取 plugin 方法前面都要加 $
 const { $hello } = useNuxtApp()
 
-const store=useHomeStore()
+const store = useHomeStore()
 </script>
 
 <style>
