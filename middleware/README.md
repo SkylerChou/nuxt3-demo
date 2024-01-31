@@ -40,3 +40,5 @@ definePageMeta({
 
 加上檔案中間名 XXX.global.js，在 middleware 檔名後面加上 global 就會變成全域的 route middleware
 
+## 連結
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/guide/directory-structure/middleware) to learn more.
