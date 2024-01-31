@@ -17,7 +17,7 @@
 //   ],
 // });
 
-// Nuxt 的新方法，可以直接用駝峰命名設定
+// Nuxt 的新方法，可以直接用駝峰命名設定，參考官方文件 - https://nuxt.com/docs/getting-started/seo-meta#useseometa
 // useSeoMeta({
 //   title: "About - Nuxt3 高效入門全攻略",
 //   description: "關於我們 - 最棒的Nuxt3的線上課程",
@@ -36,10 +36,22 @@ useServerSeoMeta({
   ogDescription: () => `${res.data.value.description} - Nuxt3`,
 });
 
+// 單頁面引入外部資源
+useHead({
+  link: [
+    {
+      rel: "stylesheet",
+      href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+    },
+  ],
+  script: [
+    {
+      src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js",
+      async: true,
+    },
+  ],
+});
 
-useServerSeoMeta({
-
-})
 
 </script>
 
