@@ -36,7 +36,7 @@ useServerSeoMeta({
   ogDescription: () => `${res.data.value.description} - Nuxt3`,
 });
 
-// 單頁面引入外部資源
+// 單頁面引入外部資源，可參照 https://nuxt.com/docs/getting-started/seo-meta#body-tags
 useHead({
   link: [
     {

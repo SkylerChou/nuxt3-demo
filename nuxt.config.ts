@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // 設定只有在 global 下才自動引入，可參照 https://nuxt.com/docs/getting-started/seo-meta#body-tags
+  // 設定只有在 global 下才自動引入
   "components": {
   "dirs": [
     {
