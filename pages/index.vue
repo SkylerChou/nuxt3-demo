@@ -8,6 +8,9 @@
   <ClientOnly>
     <h2>{{$hello("Skyler")}}</h2>
   </ClientOnly>
+
+  <NuxtLink to="/user">User</NuxtLink>
+  
   <h2 v-timeformat="1680574081915"></h2>
   <VDatePicker v-model='selectedDate' />
   <div></div>

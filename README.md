@@ -92,6 +92,9 @@ npx nuxi add composable <檔案名稱>
 # 新增 plugin 檔案
 npx nuxi add plugin <檔案名稱>
 
+# 新增 middleware 檔案
+npx nuxi add middleware <檔案名稱>
+
 # 新增 store 檔案
 npm install pinia @pinia/nuxt
 
