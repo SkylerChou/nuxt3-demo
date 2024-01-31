@@ -4,10 +4,8 @@
 
 <script setup>
 definePageMeta({
-  // 匿名的 middleware
-  middleware: (to, from) => {
-    console.log("address=>", { to, from });
-  },
+  // 共用的 middleware
+  middleware: ['auth'],
 });
 </script>
 
