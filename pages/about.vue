@@ -48,6 +48,8 @@ useHead({
     {
       src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js",
       async: true,
+      // valid options are: 'head' | 'bodyClose' | 'bodyOpen'，用來調整載入的位置
+      tagPosition: 'bodyClose'
     },
   ],
 });
