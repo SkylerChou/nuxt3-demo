@@ -1,5 +1,8 @@
 <template>
   <h1>首頁 : {{ store.count }}</h1>
+
+  <div>{{ data }}</div>
+  
   <button @click="store.addCount">Add</button>
   <!-- 
     如果只要在客戶端渲染，要加上 ClientOnly，不然伺服器會報錯
@@ -9,8 +12,8 @@
     <h2>{{$hello("Skyler")}}</h2>
   </ClientOnly>
 
-  <NuxtLink to="/user">User</NuxtLink>
-  
+  <NuxtLink to="/user">User</NuxtLink> | <NuxtLink to="/about">About</NuxtLink>
+
   <h2 v-timeformat="1680574081915"></h2>
   <VDatePicker v-model='selectedDate' />
   <div></div>
@@ -29,6 +32,10 @@ const { $hello } = useNuxtApp();
 const store = useHomeStore();
 
 const selectedDate = ref(new Date());
+
+const { data } = await useFetch("https://vue-lessons-api.vercel.app/seo/user");
+
+
 </script>
 
 <style>
