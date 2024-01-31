@@ -18,12 +18,28 @@
 // });
 
 // Nuxt 的新方法，可以直接用駝峰命名設定
-useSeoMeta({
-  title: "About - Nuxt3 高效入門全攻略",
-  description: "關於我們 - 最棒的Nuxt3的線上課程",
-  ogDescription: "關於我們 - 最棒的Nuxt3的線上課程",
-  ogTitle: "About - Nuxt3 高效入門全攻略",
+// useSeoMeta({
+//   title: "About - Nuxt3 高效入門全攻略",
+//   description: "關於我們 - 最棒的Nuxt3的線上課程",
+//   ogDescription: "關於我們 - 最棒的Nuxt3的線上課程",
+//   ogTitle: "About - Nuxt3 高效入門全攻略",
+// });
+
+
+const res = await useFetch('https://vue-lessons-api.vercel.app/seo/about');
+
+// useServerSeoMeta 會讓改變初始加載 meta tag，但 client 不會有改變，顯示會是 global meta tag。
+useServerSeoMeta({
+  title: () => `${res.data.value.title} - Nuxt3`,
+  ogTitle: () => `${res.data.value.title} - Nuxt3`,
+  description: () => `${res.data.value.description} - Nuxt3`,
+  ogDescription: () => `${res.data.value.description} - Nuxt3`,
 });
+
+
+useServerSeoMeta({
+
+})
 
 </script>
 
