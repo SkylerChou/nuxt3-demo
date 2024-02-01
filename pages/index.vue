@@ -12,7 +12,7 @@
     <h2>{{$hello("Skyler")}}</h2>
   </ClientOnly>
 
-  <NuxtLink to="/user">User</NuxtLink> | <NuxtLink to="/about">About</NuxtLink>
+  <NuxtLink to="/user">User</NuxtLink> | <NuxtLink to="/about">About</NuxtLink> | <NuxtLink to="/async-data">Async-data</NuxtLink>
 
   <h2 v-timeformat="1680574081915"></h2>
   <VDatePicker v-model='selectedDate' />
@@ -38,7 +38,7 @@ const { data } = await useFetch("https://vue-lessons-api.vercel.app/seo/user",{
     // 設置 request headers
     options.headers = options.headers || {};
     options.headers.authorization=`Bearer 1234567890`
-    
+
     console.log(options.headers.authorization);
   },
   onResponse({request,response,options}){

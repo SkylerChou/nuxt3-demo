@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    devtools: { enabled: false },
   // 全域的 meta tag 設定，可參照 https://nuxt.com/docs/api/nuxt-config#head
   "app": {
     "head": {
