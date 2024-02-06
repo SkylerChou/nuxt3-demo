@@ -2,10 +2,9 @@
   <button>click</button>
 </template>
 
-<script>
-export default {
-
-};
+<script lang="ts" setup>
+const num:number = 123;
+console.log(num);
 </script>
 
 <style>

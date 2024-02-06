@@ -2,10 +2,12 @@ module.exports = {
   root: true,
   extends: [
     '@nuxt/eslint-config',
+    '@nuxtjs/eslint-config-typescript',
     'airbnb-base',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser',
   },
   settings: {
     'import/resolver': {
