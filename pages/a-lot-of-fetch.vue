@@ -8,7 +8,6 @@
 </template>
 
 <script setup>
-
 /**
  * API 少的時候使用此方式，還不會有什麼問題
  */
@@ -20,11 +19,8 @@
  */
 const [{ data: orgsData }, { data: reposData }] = await Promise.all([
   useFetch('https://api.github.com/orgs/nuxt'),
-  useFetch('https://api.github.com/orgs/nuxt/repos'),
-]);
-
+  useFetch('https://api.github.com/orgs/nuxt/repos')
+])
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

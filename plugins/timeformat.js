@@ -1,4 +1,4 @@
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('timeformat', {
@@ -8,8 +8,8 @@ export default defineNuxtPlugin((nuxtApp) => {
      * @param binding element 綁定的值
      */
     mounted(el, binding) {
-      const time = dayjs(binding.value).format('YYYY-MM-DD');
-      el.innerText = time;
-    },
-  });
-});
+      const time = dayjs(binding.value).format('YYYY-MM-DD')
+      el.innerText = time
+    }
+  })
+})
