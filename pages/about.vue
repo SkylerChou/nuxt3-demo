@@ -25,7 +25,6 @@
 //   ogTitle: "About - Nuxt3 高效入門全攻略",
 // });
 
-
 const res = await useFetch('https://vue-lessons-api.vercel.app/seo/about');
 
 // useServerSeoMeta 會讓改變初始加載 meta tag，但 client 不會有改變，顯示會是 global meta tag。
@@ -40,20 +39,19 @@ useServerSeoMeta({
 useHead({
   link: [
     {
-      rel: "stylesheet",
-      href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
     },
   ],
   script: [
     {
-      src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js",
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js',
       async: true,
       // valid options are: 'head' | 'bodyClose' | 'bodyOpen'，用來調整載入的位置
-      tagPosition: 'bodyClose'
+      tagPosition: 'bodyClose',
     },
   ],
 });
-
 
 </script>
 

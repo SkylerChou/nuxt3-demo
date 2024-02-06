@@ -1,15 +1,19 @@
 <template>
-  <h1>useAsyncData</h1>
-  <!-- 方法一 -->
-  <!-- <button @click="refresh">refresh</button> -->
-  <!-- 方法二 -->
-  <button @click="refreshGetData">refresh</button>
-  {{ data }}
+  <div>
+    <h1>useAsyncData</h1>
+    <!-- 方法一 -->
+    <!-- <button @click="refresh">refresh</button> -->
+    <!-- 方法二 -->
+    <button @click="refreshGetData">
+      refresh
+    </button>
+    <div>{{ data }}</div>
+  </div>
 </template>
 
 <script setup>
 
-/** 
+/**
  * 如果只是一般的取資料 使用 useFetch
  * 但如果要客製化 key 值、或其他非同步操作要使用 useAsyncData
  */
@@ -32,23 +36,20 @@
 //   return $fetch('https://vue-lessons-api.vercel.app/seo/user')
 // })
 
-/** 
+/**
  * ----- 方式二 -----
  * 使用 refreshNuxtData
- * 我們就可以透過這個唯一的key使用 refreshNuxtData 
+ * 我們就可以透過這個唯一的key使用 refreshNuxtData
  * 去重新觸發抓取資料，更新頁面的顯示，而且在其他組件也都可以調用。
  */
-const { data } = await useAsyncData('nuxt3test', () => {
-  return $fetch('https://vue-lessons-api.vercel.app/seo/user')
-})
+const { data } = await useAsyncData('nuxt3test', () => $fetch('https://vue-lessons-api.vercel.app/seo/user'));
 
-const refreshGetData = () =>{
+const refreshGetData = () => {
   refreshNuxtData('nuxt3test');
   console.log('refreshGetData');
-}
+};
 
-
-// 這是會重複在 server 跟 client 觸發，所以不推薦這麼做 
+// 這是會重複在 server 跟 client 觸發，所以不推薦這麼做
 // const data = await $fetch("https://vue-lessons-api.vercel.app/seo/user");
 
 </script>

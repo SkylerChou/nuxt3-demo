@@ -1,11 +1,14 @@
 <template>
   <Head>
-      <Title>{{ title }}</Title>
-      <Meta name="description" :content="description" />
-      <Link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
+    <Title>{{ title }}</Title>
+    <Meta
+      name="description"
+      :content="description"
+    />
+    <Link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </Head>
 
   <h1>user</h1>
@@ -18,7 +21,7 @@ definePageMeta({
 });
 
 // 可參考 https://nuxt.com/docs/getting-started/seo-meta#components
-const res = await useFetch("https://vue-lessons-api.vercel.app/seo/user");
+const res = await useFetch('https://vue-lessons-api.vercel.app/seo/user');
 
 const title = computed(() => res.data.value.title);
 const description = computed(() => res.data.value.description);
