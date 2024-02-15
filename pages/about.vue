@@ -1,6 +1,14 @@
 <template>
   <div>
     <h1>About</h1>
+
+    <NuxtLink to="/about">About</NuxtLink>
+    <NuxtLink to="/about/a">A page</NuxtLink>
+    <NuxtLink to="/about/b">B page</NuxtLink>
+
+    <main>
+      <NuxtPage />
+    </main>
   </div>
 </template>
 
@@ -54,4 +62,9 @@ useHead({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>

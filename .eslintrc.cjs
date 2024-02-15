@@ -29,7 +29,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['Btn', 'Home', 'Footer', 'Header']
+        ignores: ['Btn', 'Home', 'Footer', 'Header', 'index', 'a', 'b']
       }
     ]
   }
