@@ -31,27 +31,27 @@
 // const {count, addCount}=useAddCount()
 
 // 取 plugin 方法前面都要加 $
-const { $hello } = useNuxtApp()
+const { $hello } = useNuxtApp();
 
-const store = useHomeStore()
+const store = useHomeStore();
 
-const selectedDate = ref(new Date())
+const selectedDate = ref(new Date());
 
 const { data } = await useFetch('https://vue-lessons-api.vercel.app/seo/user', {
   onRequest({ request, options }) {
     // 設置 request headers
-    options.headers = options.headers || {}
-    options.headers.authorization = 'Bearer 1234567890'
+    options.headers = options.headers || {};
+    options.headers.authorization = 'Bearer 1234567890';
 
-    console.log(options.headers.authorization)
+    console.log(options.headers.authorization);
   },
 
   onResponse({ request, response, options }) {
     // 處理回傳資料
 
-    return response._data
+    return response._data;
   }
-})
+});
 </script>
 
 <style></style>

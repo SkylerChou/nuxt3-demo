@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from 'node:url';
 
 export default defineNuxtConfig({
   typescript: {
@@ -51,4 +51,4 @@ export default defineNuxtConfig({
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
     components: fileURLToPath(new URL('./components', import.meta.url))
   }
-})
+});

@@ -41,12 +41,12 @@
  */
 const { data } = await useAsyncData('nuxt3test', () =>
   $fetch('https://vue-lessons-api.vercel.app/seo/user')
-)
+);
 
 const refreshGetData = () => {
-  refreshNuxtData('nuxt3test')
-  console.log('refreshGetData')
-}
+  refreshNuxtData('nuxt3test');
+  console.log('refreshGetData');
+};
 
 // 這是會重複在 server 跟 client 觸發，所以不推薦這麼做
 // const data = await $fetch("https://vue-lessons-api.vercel.app/seo/user");

@@ -17,13 +17,13 @@
 definePageMeta({
   // 共用的 middleware
   middleware: ['auth']
-})
+});
 
 // 可參考 https://nuxt.com/docs/getting-started/seo-meta#components
-const res = await useFetch('https://vue-lessons-api.vercel.app/seo/user')
+const res = await useFetch('https://vue-lessons-api.vercel.app/seo/user');
 
-const title = computed(() => res.data.value.title)
-const description = computed(() => res.data.value.description)
+const title = computed(() => res.data.value.title);
+const description = computed(() => res.data.value.description);
 </script>
 
 <style></style>

@@ -20,7 +20,7 @@
 const [{ data: orgsData }, { data: reposData }] = await Promise.all([
   useFetch('https://api.github.com/orgs/nuxt'),
   useFetch('https://api.github.com/orgs/nuxt/repos')
-])
+]);
 </script>
 
 <style scoped></style>

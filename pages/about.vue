@@ -25,7 +25,7 @@
 //   ogTitle: "About - Nuxt3 高效入門全攻略",
 // });
 
-const res = await useFetch('https://vue-lessons-api.vercel.app/seo/about')
+const res = await useFetch('https://vue-lessons-api.vercel.app/seo/about');
 
 // useServerSeoMeta 會讓改變初始加載 meta tag，但 client 不會有改變，顯示會是 global meta tag。
 useServerSeoMeta({
@@ -33,7 +33,7 @@ useServerSeoMeta({
   ogTitle: () => `${res.data.value.title} - Nuxt3`,
   description: () => `${res.data.value.description} - Nuxt3`,
   ogDescription: () => `${res.data.value.description} - Nuxt3`
-})
+});
 
 // 單頁面引入外部資源，可參照 https://nuxt.com/docs/getting-started/seo-meta#body-tags
 useHead({
@@ -51,7 +51,7 @@ useHead({
       tagPosition: 'bodyClose'
     }
   ]
-})
+});
 </script>
 
 <style scoped></style>
