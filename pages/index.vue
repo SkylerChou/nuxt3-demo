@@ -14,7 +14,8 @@
     </ClientOnly>
 
     <div>
-      <NuxtLink to="/user"> User </NuxtLink> | <NuxtLink to="/about"> About </NuxtLink> |
+      <NuxtLink to="/courses"> 課程列表 </NuxtLink> | <NuxtLink to="/user"> User </NuxtLink> |
+      <NuxtLink to="/about"> About </NuxtLink> |
       <NuxtLink to="/async-data"> Async-data </NuxtLink>
     </div>
 
