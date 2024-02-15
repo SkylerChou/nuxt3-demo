@@ -5,6 +5,8 @@ import Footer from 'components/Utils/Footer.vue';
 
 <template>
   <div>
+    <NuxtLoadingIndicator color="#f00" :height="10" :throttle="0" />
+
     <Header />
     <!-- slot 可以想像成 router-view 的功能，才能顯示頁面畫面 -->
     <slot />
