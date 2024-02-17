@@ -46,7 +46,14 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['stores']
   },
-  modules: ['@pinia/nuxt'],
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate']
+      }
+    ]
+  ],
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
     components: fileURLToPath(new URL('./components', import.meta.url))
