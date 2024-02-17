@@ -9,7 +9,7 @@ const store = useVoteStore();
       <h1>{{ vote.name }}</h1>
     </div>
     <VoteBtn @click="store.addVote(vote.name)">
-      {{ store.isFetch ? '投票中' : vote.count }}
+      {{ store.isFetch ? '投票中' : vote.count0 }}
     </VoteBtn>
   </div>
 </template>
