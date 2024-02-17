@@ -3,7 +3,7 @@
 import VoteCard from 'components/VoteCard.vue';
 
 const voteStore = useVoteStore();
-
+const testStore = useTestStore();
 onMounted(() => {
   voteStore.setVoteData();
 });
@@ -11,6 +11,7 @@ onMounted(() => {
 
 <template>
   <div class="vote_app">
+    <div>{{ testStore.voteToTestData }}</div>
     <h1>投票列表</h1>
     <div class="box_list">
       <VoteCard />
