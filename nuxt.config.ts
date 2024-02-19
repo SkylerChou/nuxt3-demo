@@ -2,10 +2,10 @@
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineNuxtConfig({
-  runtimeConfig: {
-    token: '',
-    public: {
-      apiUrl: ''
+  /** 翻新舊專案，使用 vite 的設定來帶入 process.env */
+  vite: {
+    define: {
+      'process.env': process.env
     }
   },
   typescript: {

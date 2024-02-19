@@ -99,3 +99,35 @@ npx nuxi add middleware <檔案名稱>
 npm install pinia @pinia/nuxt
 
 ```
+
+## .env 
+
+### 方式一 runtimeConfig
+
+#### .env
+```bash
+NUXT_TOKEN=1234567890
+NUXT_PUBLIC_API_URL=https://www.mike.com
+```
+
+#### .env.prod
+```bash
+NUXT_TOKEN=9876543210
+NUXT_PUBLIC_API_URL=https://www.skyler.com
+```
+
+### 方式二 vite process.env
+
+#### .env
+```bash
+WEB_URL=https://www.mike.com
+ENV=local
+TOKEN=1234567890
+```
+
+#### .env.prod
+```bash
+WEB_URL=https://www.skyler.com
+ENV=production
+TOKEN=9876543210
+```

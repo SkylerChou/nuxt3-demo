@@ -62,19 +62,8 @@ const { data } = await useFetch('https://vue-lessons-api.vercel.app/seo/user', {
  * 環境變數
  * 通常不會上到 git 可以被爬蟲爬到
  */
-const config = useRuntimeConfig();
-console.log(config.public);
-
-if (process.server) {
-  console.log('server.token:', config.token);
-}
-
-/** 打 API ，如果不是寫在 public 的環境變數，在 client 端取不到 */
-// const { refresh } = await useFetch(`${config.public.apiUrl}/api/banner`, {
-//   headers: {
-//     Authorization: `Bearer ${config.token}`
-//   }
-// });
+console.log('ENV=>', process.env.ENV);
+console.log('WEB_URL=>', process.env.WEB_URL);
 </script>
 
 <style></style>
