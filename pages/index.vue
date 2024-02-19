@@ -5,6 +5,10 @@
     <div>{{ data }}</div>
 
     <button @click="store.addCount">Add</button>
+    <br />
+    <br />
+    <button @click="refresh">環境變數刷新</button>
+
     <!--
     如果只要在客戶端渲染，要加上 ClientOnly，不然伺服器會報錯
     ClientOnly 是可以讓你指定你的DOM只在 Clinet 渲染，不在 Server 端渲染
@@ -53,6 +57,24 @@ const { data } = await useFetch('https://vue-lessons-api.vercel.app/seo/user', {
     return response._data;
   }
 });
+
+/**
+ * 環境變數
+ * 通常不會上到 git 可以被爬蟲爬到
+ */
+const config = useRuntimeConfig();
+console.log(config.public);
+
+if (process.server) {
+  console.log('server.token:', config.token);
+}
+
+/** 打 API ，如果不是寫在 public 的環境變數，在 client 端取不到 */
+// const { refresh } = await useFetch(`${config.public.apiUrl}/api/banner`, {
+//   headers: {
+//     Authorization: `Bearer ${config.token}`
+//   }
+// });
 </script>
 
 <style></style>

@@ -2,6 +2,12 @@
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    token: '',
+    public: {
+      apiUrl: ''
+    }
+  },
   typescript: {
     typeCheck: true
   },
