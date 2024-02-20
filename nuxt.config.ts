@@ -1,12 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { fileURLToPath, URL } from 'node:url';
+import path from 'path';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
-export default defineNuxtConfig({
+const config: object = {
   /** 翻新舊專案，使用 vite 的設定來帶入 process.env */
   vite: {
     define: {
       'process.env': process.env
-    }
+    },
+    plugins: [
+      createSvgIconsPlugin({
+        iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
+        symbolId: '[dir]/[name]',
+        customDomId: '__svg__icons__dom__'
+      })
+    ]
   },
   typescript: {
     typeCheck: true
@@ -64,4 +73,6 @@ export default defineNuxtConfig({
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
     components: fileURLToPath(new URL('./components', import.meta.url))
   }
-});
+};
+
+export default defineNuxtConfig(config);

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <SvgIcon class="icon" name="side/icon-community" :color="'#f20'" />
+    <SvgIcon class="icon" name="icon-documentation" />
     <h1>首頁 : {{ store.count }}</h1>
 
     <div>{{ data }}</div>
@@ -33,6 +35,7 @@
 </template>
 
 <script setup>
+import SvgIcon from 'components/SvgIcon.vue';
 // const {count, addCount}=useAddCount()
 
 // 取 plugin 方法前面都要加 $
@@ -66,4 +69,9 @@ console.log('ENV=>', process.env.ENV);
 console.log('WEB_URL=>', process.env.WEB_URL);
 </script>
 
-<style></style>
+<style scoped>
+.icon {
+  width: 30px;
+  height: 30px;
+}
+</style>

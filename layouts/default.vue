@@ -1,4 +1,6 @@
 <script setup>
+import 'virtual:svg-icons-register';
+
 import Header from 'components/Utils/Header.vue';
 import Footer from 'components/Utils/Footer.vue';
 
